@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>challenge</title>
+  </head>
+  <body>
+    <h1>challenge</h1>
+
+    <script>
+      const printForcast = (arrVal) => {
+        let count = 0;
+        for (let i = 0; i < arrVal.length; i++) {
+          //console.log(arrVal[i]);
+          const weatherValues = `...${arrVal[i]}deg in ${(count += 1)} days...`;
+          console.log(weatherValues);
+        }
+      };
+      printForcast([17, 21, 23]);
+    </script>
+  </body>
+</html>

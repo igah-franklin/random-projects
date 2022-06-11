@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challenge func</title>
+</head>
+<body>
+    <h1>functon challenge</h1>
+
+
+    <script>
+        const calcAverage = (firstScore, secondScore, thirdScore) => (firstScore + secondScore + thirdScore)/3
+         
+        //console.log(calcAverage(1,2,3))
+
+        const dolphinsAverage = calcAverage(85, 54, 41);
+        //console.log(dolphinsAverage)
+        const koalasAverage = calcAverage(23, 34, 27)
+        //console.log(koalasAverage)
+
+        function checkWinner(avgDolphins, avgKoalas){
+            if(avgDolphins >= 2*avgKoalas){
+                console.log(`Dolphins wins with point ${avgDolphins-avgKoalas}`);
+            }
+            else if(avgKoalas >= 2*avgDolphins){
+                console.log(`Koalas wins with point ${avgKoalas}`);
+            }
+            else{
+                console.log('no match winner')
+            }
+            
+        }
+        checkWinner(dolphinsAverage,koalasAverage)
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>local storage</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 30%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+      }
+      input {
+        padding: 10px;
+        width: 100%;
+      }
+      .display_text {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <input type="text" />
+      <div class="display_text">
+        <h2></h2>
+      </div>
+    </section>
+
+    <script>
+      const getInput = document.querySelector("input");
+      const displayInput = document.querySelector("h2");
+      displayInput.innerHTML = localStorage.getItem("store");
+
+      getInput.addEventListener("keyup", () => {
+        //displayInput.innerHTML = getInput.value;
+        localStorage.setItem("store", getInput.value);
+        displayInput.innerHTML = localStorage.getItem("store");
+      });
+
+      //   setTimeout(() => {
+      //     localStorage.clear();
+      //   }, 10000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow functions</title>
+</head>
+<body>
+    <h1>funcs</h1>
+
+
+
+    <script>
+        function birth(brt){
+            console.log(20-brt)
+        }
+        //birth(3)
+
+        const calcAge = birthYear => 2037 - birthYear
+        //console.log(calcAge(1992))
+
+        function cutPieces(fruits){
+            return fruits * 5
+        }
+
+        function fruitProcessor(apples, oranges){
+
+            const applePieces = cutPieces(apples)
+            const orangePieces = cutPieces(oranges)
+            
+            const fruitJuice = `this is a juice with ${applePieces} Apples and ${orangePieces} Oranges`
+            return fruitJuice;
+        }
+        console.log(fruitProcessor(5,3))
+    </script>
+</body>
+</html>

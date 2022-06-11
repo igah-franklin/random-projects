@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>game challenge</title>
+    <style>
+      .cover {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .guess_cover {
+        display: flex;
+        align-items: center;
+      }
+      .line1,
+      .line2 {
+        height: 10px;
+        width: 200px;
+        background-color: brown;
+      }
+      .secret_number {
+        border: 1px solid red;
+        padding: 0px 15px 0px 15px;
+      }
+      .play_zone {
+        display: flex;
+        align-items: center;
+      }
+      .result li {
+        padding: 10px;
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="cover">
+      <div class="replay">
+        <div class="">
+          <button id="reset">restart game</button>
+        </div>
+      </div>
+      <h1>Guess my number game</h1>
+      <div class="guess_cover">
+        <div class="line1"></div>
+        <h1 class="secret_number">?</h1>
+        <div class="line2"></div>
+      </div>
+      <div class="play_zone">
+        <div class="action">
+          <input type="number" id="entry" />
+          <button id="check">Check</button>
+        </div>
+        <div class="result">
+          <ul>
+            <li class="message">...start guessing</li>
+            <li>score: <span class="score">20</span></li>
+            <li class="high_score">High score:</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="game.js"></script>
+  </body>
+</html>

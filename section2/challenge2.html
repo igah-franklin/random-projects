@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challenge 2</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        //1) function to calculate tip
+        const calTip = (bill) => {
+            tip = bill >= 50 && bill <= 300 ? (bill * 15)/100 : (bill * 20)/100
+            return tip;
+        }
+        //calTip(100)
+
+        //2) create an array of bills
+        const bills = [125, 555, 44]
+
+        //3)create an array of tips
+        const tips = []
+
+        const firstBillTip = calTip(bills[0])
+        const secondBillTip = calTip(bills[1])
+        const thirdBillTip = calTip(bills[2])
+        //console.log('first bill tip', firstBillTip)
+        tips.push(firstBillTip)
+        tips.push(secondBillTip)
+        tips.push(thirdBillTip)
+
+        console.log('list of tips', tips)
+        
+
+        //create a map function to map the total
+
+        const total = tips.map((val) => val + bills[0] )
+        console.log('total:', total)
+    </script>
+</body>
+</html>

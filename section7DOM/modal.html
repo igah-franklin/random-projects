@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modal</title>
+    <style>
+      main {
+        position: relative;
+      }
+      .hidden {
+        display: flex;
+        width: 70vw;
+        height: 50vh;
+        justify-items: center;
+        align-items: center;
+        margin: 0 auto;
+        background-color: seagreen;
+        color: #fff;
+        display: none;
+      }
+      .overlay {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(185, 86, 43);
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="buttons-div">
+        <button class="open_modal">open modal</button>
+        <button class="open_modal">open modal</button>
+        <button class="open_modal">open modal</button>
+      </div>
+
+      <section class="modal_content hidden">
+        <div class="">
+          <button id="close_modal">X</button>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab
+            consequuntur pariatur, deserunt itaque quod? Voluptatem, labore
+            dolores. Nostrum consequatur itaque iste commodi error id! Officia
+            error vel dolor odit?
+          </p>
+        </div>
+      </section>
+      <div class="overlay hidden"></div>
+    </main>
+
+    <script>
+      const openModal = document.querySelectorAll(".open_modal");
+      const modal = document.querySelector(".modal_content");
+      const closemodal = document.querySelector("#close_modal");
+      for (let i = 0; i < openModal.length; i++) {
+        openModal[i].addEventListener("click", function () {
+          modal.classList.remove("hidden");
+        });
+      }
+      closemodal.addEventListener("click", function () {
+        modal.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>

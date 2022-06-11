@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challenge 3</title>
+</head>
+<body>
+    
+    <h1>challenge</h1>
+
+
+
+    <script>
+        
+        const minimumScore = 100;
+        const dolphins  = Math.floor(((96 + 108 + 89)/3 ) + ((97+112+101)/3) + ((97+112+101)/3));
+        const koalas = Math.floor(((88 + 91 + 110)/3)+((109+95+123)/3)+((109+95+106)/3));
+
+        console.log('dolphine:', dolphins, '\n', 'koalas:', koalas )
+
+        if(dolphins > koalas && dolphins >= minimumScore){
+            console.log(`dolphins won \nscore:${dolphins}`)
+        }
+        else if(koalas > dolphins && koalas >= minimumScore){
+            console.log(`koalas won \nscore:${koalas}`)
+        }else{
+            console.log(`Neither ${dolphins} nor ${koalas} won `)
+        }
+    </script>
+</body>
+</html>
