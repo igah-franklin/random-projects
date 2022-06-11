@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>student form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 30%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        background-color: cadetblue;
+      }
+      .form_control {
+        margin: 5px;
+      }
+      input {
+        padding: 10px;
+        width: 400px;
+      }
+      button {
+        min-width: 200px;
+        padding: 10px;
+      }
+      .display_text {
+        width: 400px;
+        background-color: chocolate;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <form action="" id="studentForm">
+        <div class="form_control">
+          <input type="text" placeholder="student name" name="name" />
+        </div>
+        <div class="form_control">
+          <input type="text" placeholder="student age" name="age" />
+        </div>
+        <div class="form_control">
+          <input type="text" placeholder="student roll number" name="roll" />
+        </div>
+        <div class="form_control">
+          <button>Add student</button>
+        </div>
+      </form>
+      <div class="display_text"></div>
+    </section>
+
+    <script src="form.js
+    "></script>
+  </body>
+</html>
