@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>crud app</title>
+  </head>
+  <body>
+    <header>
+      <h1>todo app</h1>
+      <form action="javascript:void(0)" method="post" onsubmit="app.add()">
+        <input type="text" placeholder="additem" id="add-todo" />
+        <input type="submit" value="add" name="" id="" />
+      </form>
+      <p>you have:</p>
+      <p id="counter"></p>
+      <table>
+        <tr class="to-do">
+          <th><h3>To-do</h3></th>
+        </tr>
+        <tbody id="tasks"></tbody>
+      </table>
+    </header>
+    <section id="edit-box" role="aria-hidden">
+      <form action="javascript:void(0);" method="post" id="save-edit">
+        <input type="text" name="" id="edit-todo" />
+        <input type="submit" value="save" />
+      </form>
+    </section>
+  </body>
+</html>

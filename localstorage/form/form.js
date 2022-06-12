@@ -14,6 +14,14 @@ const students = [
 ];
 
 console.log(students);
+const newStudent = (name, age, roll) => {
+  students.push({
+    name,
+    age,
+    roll,
+  });
+  return { name, age, roll };
+};
 const addStudent = () => {
   students.forEach(({ name, age, roll }) => {
     //create elements
@@ -34,7 +42,12 @@ const addStudent = () => {
 
 studentForm.onsubmit = (e) => {
   e.preventDefault();
-  addStudent();
+  const createStudent = newStudent(
+    nameInput.value,
+    ageInput.value,
+    rollInput.value
+  );
+  createStudent();
   nameInput.value = "";
   ageInput.value = "";
   rollInput.value = "";
