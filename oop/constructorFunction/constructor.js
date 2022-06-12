@@ -20,4 +20,4 @@ Person.prototype.calculateAge = function () {
   return age;
 };
 
-console.log(paul.calculateAge(), pat.calculateAge());
+//console.log(paul.calculateAge(), pat.calculateAge());
